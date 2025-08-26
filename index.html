@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+
+    <style>
+      a:hover {
+        background-color: red;
+      }
+
+      a:focus {
+        background-color: blue;
+      }
+
+      a::after {
+        content: "--";
+      }
+
+      li::first-letter {
+        font-size: 24px;
+        color: green;
+      }
+
+      a::selection {
+        background-color: pink;
+      }
+
+      img {
+        margin: auto;
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <nav>
+        <ul>
+          <li><a href="/">Sobre</a></li>
+          <li><a href="/">Educação</a></li>
+          <li><a href="/">Projetos</a></li>
+          <li><a href="/">Contato</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <main>
+      <h1>Hello World</h1>
+      <img
+        src="https://m.media-amazon.com/images/M/MV5BY2RlNWMwZmUtMjM4MC00MDczLTk3NjktYTg2OTNiNThhNmNhXkEyXkFqcGc@._V1_FMjpg_UX1000_.jpg"
+        width="200"
+        alt=""
+      />
+      <img
+        src="https://m.media-amazon.com/images/M/MV5BY2RlNWMwZmUtMjM4MC00MDczLTk3NjktYTg2OTNiNThhNmNhXkEyXkFqcGc@._V1_FMjpg_UX1000_.jpg"
+        width="200"
+        alt=""
+      />
+    </main>
+  </body>
+</html>
