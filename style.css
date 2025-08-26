@@ -17,6 +17,10 @@
   font-family: "DM Sans", sans-serif;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   background-color: var(--gray-100);
   color: var(--gray-800);
@@ -49,7 +53,7 @@ ul {
 
 .section-wrapper {
   padding-inline: 1.5rem;
-  padding-top: 4rem;
+  padding-block: 4rem;
 }
 
 header {
@@ -79,17 +83,20 @@ header {
 
 .title-h2 {
   color: var(--primary);
-  font-size: 2.5rem;
-  font-weight: 500;
+  font-size: 2rem;
+  font-weight: 600;
   margin-bottom: 3rem;
 
   &::before {
     content: ".";
     width: 1px;
-    height: 100%;
     background-color: var(--primary);
     margin-right: 8px;
   }
+}
+
+.title-h3 {
+  font-size: 1.25rem;
 }
 
 .red-area {
@@ -176,6 +183,49 @@ header {
     font-size: 1.25rem;
     p {
       margin-bottom: 24px;
+    }
+  }
+}
+
+#education {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 5rem;
+
+  .text-container {
+    .card {
+      display: flex;
+      background-color: var(--primary);
+      padding: 2rem;
+      gap: 1rem;
+      border-radius: 1.5rem;
+      color: white;
+      margin-bottom: 3rem;
+
+      div {
+        display: flex;
+        flex-direction: column;
+        gap: 0.125rem;
+      }
+
+      .period {
+        font-size: 0.875rem;
+      }
+    }
+
+    footer {
+      display: flex;
+      flex-direction: column;
+      gap: 0.25rem;
+
+      div {
+        display: flex;
+        gap: 2rem;
+        align-items: center;
+        color: var(--primary);
+        font-weight: 500;
+        font-size: 1.125rem;
+      }
     }
   }
 }
