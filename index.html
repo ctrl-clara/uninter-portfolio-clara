@@ -1,61 +1,38 @@
 <!DOCTYPE html>
+
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
-
-    <style>
-      a:hover {
-        background-color: red;
-      }
-
-      a:focus {
-        background-color: blue;
-      }
-
-      a::after {
-        content: "--";
-      }
-
-      li::first-letter {
-        font-size: 24px;
-        color: green;
-      }
-
-      a::selection {
-        background-color: pink;
-      }
-
-      img {
-        margin: auto;
-      }
-    </style>
+    <link rel="stylesheet" href="style.css" />
+    <title>Clara Moreira | Portfolio</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap"
+      rel="stylesheet"
+    />
   </head>
-  <body>
-    <header>
-      <nav>
-        <ul>
-          <li><a href="/">Sobre</a></li>
-          <li><a href="/">Educação</a></li>
-          <li><a href="/">Projetos</a></li>
-          <li><a href="/">Contato</a></li>
-        </ul>
-      </nav>
-    </header>
 
-    <main>
-      <h1>Hello World</h1>
-      <img
-        src="https://m.media-amazon.com/images/M/MV5BY2RlNWMwZmUtMjM4MC00MDczLTk3NjktYTg2OTNiNThhNmNhXkEyXkFqcGc@._V1_FMjpg_UX1000_.jpg"
-        width="200"
-        alt=""
-      />
-      <img
-        src="https://m.media-amazon.com/images/M/MV5BY2RlNWMwZmUtMjM4MC00MDczLTk3NjktYTg2OTNiNThhNmNhXkEyXkFqcGc@._V1_FMjpg_UX1000_.jpg"
-        width="200"
-        alt=""
-      />
-    </main>
+  <body>
+    <div class="container">
+      <header class="red-area">
+        <a href="/">
+          <img src="/images/logo.svg" alt="" />
+        </a>
+        <nav>
+          <ul>
+            <li><a href="#">Sobre mim</a></li>
+            <li><a href="#">Educação</a></li>
+            <li><a href="#">Projetos</a></li>
+            <li><a href="#">Contato</a></li>
+          </ul>
+        </nav>
+      </header>
+
+      <main>
+        <section id="hero" class="section-wrapper red-area"></section>
+      </main>
+    </div>
   </body>
 </html>
