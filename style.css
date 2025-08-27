@@ -28,6 +28,50 @@ body {
   position: relative;
 }
 
+header {
+  position: sticky;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 100;
+
+  .header-container {
+    top: 3.5rem;
+    max-width: 1188px;
+    height: 5.5rem;
+    margin-inline: auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-inline: 1.5rem;
+    font-size: 1.25rem;
+    background: linear-gradient(
+      to right,
+      var(--primary) 328px,
+      var(--gray-100) 0%
+    );
+
+    @media (max-width: 800px) {
+      background: var(--primary);
+    }
+
+    ul {
+      display: flex;
+      gap: 2.75rem;
+      justify-content: space-between;
+      font-weight: 500;
+
+      @media (max-width: 800px) {
+        display: none;
+      }
+    }
+  }
+}
+
+main {
+  width: 100%;
+}
+
 a {
   text-decoration: none;
   color: inherit;
@@ -54,38 +98,20 @@ ul {
 
 .section-wrapper {
   padding-inline: 1.5rem;
-  padding-block: 4rem;
+  padding-block: 6rem;
+
+  @media (max-width: 800px) {
+    padding-bottom: 2rem;
+  }
 }
 
-header {
-  position: sticky;
-  top: 0;
-  left: 0;
-  right: 0;
-  z-index: 100;
+.title-h1 {
+  font-size: 4.5rem;
+  color: var(--primary);
+  margin-block: 0.25rem 1rem;
 
-  .header-container {
-    top: 3.5rem;
-    max-width: 1188px;
-    height: 5.5rem;
-    margin-inline: auto;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding-inline: 1.5rem;
-    font-size: 1.25rem;
-    background: linear-gradient(
-      to right,
-      var(--primary) 328px,
-      var(--gray-100) 0%
-    );
-
-    ul {
-      display: flex;
-      gap: 2.75rem;
-      justify-content: space-between;
-      font-weight: 500;
-    }
+  @media (max-width: 800px) {
+    font-size: 3.25rem;
   }
 }
 
@@ -113,6 +139,10 @@ header {
     var(--primary) 328px,
     var(--gray-100) 0%
   );
+
+  @media (max-width: 800px) {
+    background: var(--gray-100);
+  }
 }
 
 .primary-button {
@@ -130,6 +160,10 @@ header {
     background-color: var(--primary-400);
     color: white;
   }
+
+  @media (max-width: 800px) {
+    width: 100%;
+  }
 }
 
 .secondary-button {
@@ -145,6 +179,10 @@ header {
   &:hover {
     background-color: var(--primary-200);
   }
+
+  @media (max-width: 800px) {
+    width: 100%;
+  }
 }
 
 /* Estilo por seção */
@@ -155,33 +193,50 @@ header {
   justify-content: space-between;
   align-items: center;
   gap: 3rem;
-  min-height: 890px;
+  min-height: calc(100vh - 5.5rem);
+
+  @media (max-width: 800px) {
+    flex-direction: column;
+
+    img {
+      width: 100%;
+    }
+  }
 
   .text-container {
     display: flex;
     flex-direction: column;
     font-weight: 500;
 
-    span {
-      font-size: 1.5rem;
+    @media (max-width: 800px) {
+      text-align: center;
+      align-items: center;
     }
 
-    h1 {
-      font-size: 4.5rem;
-      color: var(--primary);
-      margin-block: 0.25rem 1rem;
+    span {
+      font-size: 1.5rem;
     }
 
     p {
       font-size: 1.125rem;
       color: var(--gray-700);
       width: 80%;
+
+      @media (max-width: 800px) {
+        width: 100%;
+      }
     }
 
     .buttons-container {
       margin-top: 4.5rem;
       display: flex;
       gap: 1.5rem;
+      width: 100%;
+
+      @media (max-width: 800px) {
+        flex-direction: column;
+        align-items: center;
+      }
     }
   }
 }
@@ -190,6 +245,15 @@ header {
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 5rem;
+
+  @media (max-width: 800px) {
+    grid-template-columns: 1fr;
+    gap: 0;
+
+    img {
+      display: none;
+    }
+  }
 
   .text-container {
     font-size: 1.25rem;
@@ -203,6 +267,15 @@ header {
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 5rem;
+
+  @media (max-width: 800px) {
+    display: flex;
+    flex-direction: column;
+  }
+
+  img.education-image {
+    width: 100%;
+  }
 
   .text-container {
     .card {
@@ -248,6 +321,11 @@ header {
     gap: 1.5rem;
     grid-template-columns: repeat(3, 1fr);
 
+    @media (max-width: 800px) {
+      display: flex;
+      flex-direction: column;
+    }
+
     .image-container {
       border-radius: 1rem;
       overflow: hidden;
@@ -282,6 +360,10 @@ header {
   grid-template-columns: 1fr 1fr;
   gap: 4rem;
   align-items: center;
+
+  @media (max-width: 800px) {
+    grid-template-columns: 1fr;
+  }
 
   form {
     max-width: 30.25rem;
