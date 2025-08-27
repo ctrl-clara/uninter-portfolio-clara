@@ -5,7 +5,7 @@
     <meta charset="UTF-8" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link rel="icon" type="image/x-icon" href="/favicon.ico">
+    <link rel="icon" type="image/x-icon" href="./favicon.ico" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="style.css" />
     <title>Clara Moreira | Portfolio</title>
@@ -52,10 +52,10 @@
               fácil de usar e que realmente ajuda seus clientes no dia a dia?
             </p>
 
-            <footer>
+            <div class="buttons-container">
               <a href="#contact" class="secondary-button">Baixar CV</a>
               <a href="#contact" class="primary-button">Vamos conversar</a>
-            </footer>
+            </div>
           </div>
         </section>
 
@@ -97,7 +97,7 @@
 
           <div class="text-container">
             <div class="card">
-              <img src="/images/icon-university.svg" alt="">
+              <img src="/icons/university.svg" alt="" />
 
               <div>
                 <span class="period">2025-2029</span>
@@ -109,28 +109,25 @@
             </div>
 
             <div class="card">
-              <img src="/images/icon-university.svg" alt="">
+              <img src="/icons/university.svg" alt="" />
 
               <div>
                 <span class="period">2013-2018</span>
                 <h3 class="title-h3">Graduação em Odontologia</h3>
-                <span class="university">
-                  Universidade de Pernambuco
-                </span>
+                <span class="university"> Universidade de Pernambuco </span>
               </div>
             </div>
 
-              <footer>
-                <div>
-                  <img src="/images/icon-laptop.svg" width="32" alt="" />
-                  <span>Stacks: HTML, CSS, JavaScript, Vue.js, React.js</span>
-                </div>
-  
-                <div>
-                  <img src="/images/icon-globe.svg" width="32" alt="" />
-                  <span>Inglês: avançado</span>
-                </div>
-              </footer>
+            <div class="card-footer">
+              <div>
+                <img src="/icons/laptop.svg" width="32" alt="" />
+                <span>Stacks: HTML, CSS, JavaScript, Vue.js, React.js</span>
+              </div>
+
+              <div>
+                <img src="/icons/globe.svg" width="32" alt="" />
+                <span>Inglês: avançado</span>
+              </div>
             </div>
           </div>
         </section>
@@ -139,9 +136,9 @@
           <h2 class="title-h2">Projetos</h2>
 
           <div class="cards-container">
-            <a href="https://claramoreira.dev.br/"  target="_blank">
+            <a href="https://claramoreira.dev.br/" target="_blank">
               <div class="image-container">
-                <img src="/images/projeto-portfolio.png" alt="">
+                <img src="/images/projeto-portfolio.png" alt="" />
               </div>
 
               <span>Meu Portfolio</span>
@@ -149,7 +146,7 @@
 
             <a href="https://read-dear.vercel.app/" target="_blank">
               <div class="image-container">
-                <img src="/images/projeto-read-dear.png" alt="">
+                <img src="/images/projeto-read-dear.png" alt="" />
               </div>
 
               <span>Read, dear</span>
@@ -157,18 +154,86 @@
 
             <a href="https://mrtsushiuk.vercel.app/" target="_blank">
               <div class="image-container">
-                <img src="/images/projeto-mrt-sushi.png" alt="">
+                <img src="/images/projeto-mrt-sushi.png" alt="" />
               </div>
 
               <span>Mr. T Sushi</span>
             </a>
           </div>
         </section>
-      </main>
 
-      <footer>
-        <span>Feito por <a href="">Clara Moreira</a> ⭐</span>
-      </footer>
+        <section id="contact" class="section-wrapper">
+          <div class="form-container">
+            <h2 class="title-h2">Contato</h2>
+
+            <form method="POST">
+              <div class="input-box">
+                <label for="username"> Nome </label>
+                <input
+                  type="text"
+                  name="username"
+                  id="username"
+                  placeholder="Seu Nome"
+                />
+              </div>
+
+              <div class="input-box">
+                <label for="email"> E-mail </label>
+                <input
+                  type="text"
+                  name="email"
+                  id="email"
+                  placeholder="Seu E-mail"
+                />
+              </div>
+
+              <div class="input-box">
+                <label for="message"> Mensagem </label>
+                <textarea
+                  name="message"
+                  id="message"
+                  placeholder="Sua Mensagem"
+                ></textarea>
+              </div>
+
+              <button type="submit" class="primary-button">Enviar</button>
+            </form>
+          </div>
+
+          <div class="info-container">
+            <div class="info-row">
+              <img src="/icons/mail.svg" alt="" />
+              <span>devclaramoreira@gmail.com</span>
+            </div>
+            <div class="info-row">
+              <img src="/icons/phone.svg" alt="" />
+              <span>(83) 99621-6403</span>
+            </div>
+            <div class="info-row">
+              <img src="/icons/location.svg" alt="" />
+              <span>Caruaru, Pernambuco</span>
+            </div>
+            <div class="info-row">
+              <img src="/icons/linkedin.svg" alt="" />
+              <a
+                href="https://www.linkedin.com/in/clarammoreira/"
+                target="_blank"
+                >/clarammoreira</a
+              >
+            </div>
+            <div class="info-row">
+              <img src="/icons/github.svg" alt="" />
+              <a href="https://github.com/mmanaclara" target="_blank"
+                >/mmanaclara</a
+              >
+            </div>
+          </div>
+        </section>
+      </main>
     </div>
+
+    <footer>
+      <span>Feito por <a href="">Clara Moreira</a> ⭐</span>
+    </footer>
   </body>
 </html>
