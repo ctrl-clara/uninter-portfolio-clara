@@ -1,13 +1,14 @@
 /* Estilo geral */
 
 :root {
-  --primary-200: rgba(255, 229, 234, 1);
-  --primary-400: rgba(194, 0, 38, 1);
-  --primary: rgba(170, 0, 33, 1);
   --gray-100: rgba(249, 249, 250, 1);
   --gray-200: rgba(226, 226, 226, 1);
   --gray-700: rgba(94, 94, 94, 1);
   --gray-800: rgba(73, 73, 73, 1);
+
+  --primary-200: rgba(255, 229, 234, 1);
+  --primary-400: rgba(194, 0, 38, 1);
+  --primary: rgba(170, 0, 33, 1);
 }
 
 * {
@@ -18,7 +19,7 @@
 }
 
 html {
-  scroll-behavior: smooth;
+  scroll-behavior: smooth; /* Deixa o scroll mais suave */
 }
 
 body {
@@ -29,7 +30,7 @@ body {
 }
 
 header {
-  position: sticky;
+  position: fixed; /* Deixa o menu sempre visível na tela */
   top: 0;
   left: 0;
   right: 0;
@@ -193,7 +194,9 @@ ul {
   justify-content: space-between;
   align-items: center;
   gap: 3rem;
-  min-height: calc(100vh - 5.5rem);
+  min-height: calc(
+    100vh - 5.5rem
+  ); /* Dessa forma, o header ocupa o 5.5rem de altura e essa seção ocupa o restante */
 
   @media (max-width: 800px) {
     flex-direction: column;
@@ -388,7 +391,7 @@ ul {
       background-color: var(--gray-100);
       padding-inline: 0.5rem;
       color: var(--primary);
-      position: absolute;
+      position: absolute; /* Precisei dessa posição para a label poder ficar em cima da borda*/
       top: -14px;
       left: 1.5rem;
     }
