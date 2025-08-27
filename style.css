@@ -4,8 +4,8 @@
   --primary-200: rgba(255, 229, 234, 1);
   --primary-400: rgba(194, 0, 38, 1);
   --primary: rgba(170, 0, 33, 1);
-  --gray-100: rgba(249, 249, 250, 1)
-  --gray-200: rgba(226, 226, 226, 1); 
+  --gray-100: rgba(249, 249, 250, 1);
+  --gray-200: rgba(226, 226, 226, 1);
   --gray-700: rgba(94, 94, 94, 1);
   --gray-800: rgba(73, 73, 73, 1);
 }
@@ -58,20 +58,27 @@ ul {
 }
 
 header {
-  position: fixed;
+  position: sticky;
   top: 0;
   left: 0;
   right: 0;
+  z-index: 100;
 
   .header-container {
+    top: 3.5rem;
     max-width: 1188px;
+    height: 5.5rem;
     margin-inline: auto;
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding-inline: 1.5rem;
-    padding-top: 3.5rem;
     font-size: 1.25rem;
+    background: linear-gradient(
+      to right,
+      var(--primary) 328px,
+      var(--gray-100) 0%
+    );
 
     ul {
       display: flex;
@@ -101,7 +108,11 @@ header {
 }
 
 .red-area {
-  background: linear-gradient(to right, var(--primary) 328px, transparent 0%);
+  background: linear-gradient(
+    to right,
+    var(--primary) 328px,
+    var(--gray-100) 0%
+  );
 }
 
 .primary-button {
@@ -292,7 +303,7 @@ header {
     }
 
     label {
-      background-color: white;
+      background-color: var(--gray-100);
       padding-inline: 0.5rem;
       color: var(--primary);
       position: absolute;
